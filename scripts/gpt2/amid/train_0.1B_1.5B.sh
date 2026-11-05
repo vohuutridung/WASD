@@ -24,7 +24,7 @@ LM_DATA_DIR="${BASE_PATH}/processed_data/openwebtext/gpt2/512/10M/"
 # hp
 BATCH_SIZE=${8-8}
 LR=${9-0.0001}
-GRAD_ACC=1
+GRAD_ACC=${10:-1}
 EVAL_BATCH_SIZE=64
 # length
 MAX_LENGTH=512
