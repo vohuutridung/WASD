@@ -1,0 +1,1 @@
+- sửa GRADACC trong các file sh để nhận tham số truyền vào (hiện đang fix bằng 1).
