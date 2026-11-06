@@ -22,6 +22,7 @@ TEACHER_CKPT="${BASE_PATH}/results/gpt2/train/sft/gpt2-xlarge/"
 DATA_DIR="${BASE_PATH}/processed_data/dolly/full/gpt2/"
 LM_DATA_DIR="${BASE_PATH}/processed_data/openwebtext/gpt2/512/10M/"
 # hp
+EPOCH=${11:-20}
 BATCH_SIZE=${8-8}
 LR=${9-0.0001}
 GRAD_ACC=${10:-1}
@@ -65,7 +66,7 @@ OPTS+=" --warmup-iters 0"
 OPTS+=" --lr-decay-style cosine"
 OPTS+=" --weight-decay 1e-2"
 OPTS+=" --clip-grad 1.0"
-OPTS+=" --epochs 20"
+OPTS+=" --epochs ${EPOCH}"
 OPTS+=" --kd-ratio 1.0"
 # length
 OPTS+=" --max-length ${MAX_LENGTH}"
